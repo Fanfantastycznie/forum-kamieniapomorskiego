@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forum Kamienia Pomorskiego</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">FKP</div>
+      <div>
+        <h1>Forum Kamienia Pomorskiego</h1>
+        <p class="tagline">Miejsce rozmów o mieście, regionie i mieszkańcach</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#dzialy">Działy</a>
+      <a href="#ostatnie">Ostatnie</a>
+      <a href="#regulamin">Regulamin</a>
+      <a class="btn" href="#konto">Zaloguj</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h2>Witaj na forum 👋</h2>
+        <p>
+          Przeglądaj działy, zakładaj wątki i bierz udział w dyskusjach.
+          (Na razie to demo statyczne — kliknij w działy, żeby zobaczyć podgląd.)
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#dzialy">Przejdź do działów</a>
+          <button class="btn" id="btnNewTopic">+ Nowy wątek (demo)</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="card">
+          <div class="statNumber" id="statTopics">128</div>
+          <div class="statLabel">Wątków</div>
+        </div>
+        <div class="card">
+          <div class="statNumber" id="statPosts">1 542</div>
+          <div class="statLabel">Postów</div>
+        </div>
+        <div class="card">
+          <div class="statNumber" id="statUsers">312</div>
+          <div class="statLabel">Użytkowników</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dzialy" class="section">
+      <h3>Działy forum</h3>
+      <p class="muted">Kliknij dział, by zobaczyć przykładowe wątki (demo).</p>
+
+      <div class="grid" id="categories">
+        <!-- wypełnia JS -->
+      </div>
+    </section>
+
+    <section id="ostatnie" class="section">
+      <h3>Ostatnie wątki</h3>
+      <div class="card">
+        <ul class="list" id="recentTopics">
+          <!-- wypełnia JS -->
+        </ul>
+      </div>
+    </section>
+
+    <section id="regulamin" class="section">
+      <h3>Regulamin (skrót)</h3>
+      <div class="card">
+        <ol class="rules">
+          <li>Szanuj innych użytkowników — bez wyzwisk i nękania.</li>
+          <li>Zakaz publikowania danych wrażliwych (doxxing).</li>
+          <li>Spam i reklamy bez zgody administracji są usuwane.</li>
+          <li>Moderacja może przenosić/łączyć wątki dla porządku.</li>
+          <li>Zgłoszenia naruszeń: dział <strong>Moderacja</strong> lub przycisk „Zgłoś”.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="konto" class="section">
+      <h3>Konto (demo)</h3>
+      <div class="card">
+        <p class="muted">Tu w prawdziwym forum byłoby logowanie/rejestracja.</p>
+        <div class="row">
+          <input class="input" placeholder="Login / email" />
+          <input class="input" placeholder="Hasło" type="password" />
+          <button class="btn primary">Zaloguj (demo)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Forum Kamienia Pomorskiego • Wersja demo</p>
+  </footer>
+
+  <!-- Modal: podgląd działu / wątków -->
+  <div class="modal" id="modal">
+    <div class="modalContent">
+      <div class="modalHeader">
+        <h4 id="modalTitle">Dział</h4>
+        <button class="iconBtn" id="modalClose" aria-label="Zamknij">✕</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
